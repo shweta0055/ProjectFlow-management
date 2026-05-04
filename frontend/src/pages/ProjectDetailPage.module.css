@@ -1,0 +1,145 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.backBtn {
+  align-self: flex-start;
+}
+
+.projectHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.projectMeta {
+  flex: 1;
+  min-width: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 0.925rem;
+  color: var(--text-3);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.headerActions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.progressCard {
+  background: var(--bg-2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.progressStats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.progressStat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.progressNum {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--text);
+  line-height: 1;
+}
+
+.progressLbl {
+  font-size: 0.75rem;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+.tasksSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tasksHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tasksTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.statusTabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tabActive {
+  background: var(--accent-glow) !important;
+  color: var(--accent-2) !important;
+  border-color: rgba(124, 109, 250, 0.3) !important;
+}
+
+.tabCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  background: var(--bg-4);
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-3);
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.loadingCenter {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+@media (max-width: 640px) {
+  .headerActions { width: 100%; }
+  .headerActions .btn { flex: 1; justify-content: center; }
+  .progressStats { gap: 20px; }
+}

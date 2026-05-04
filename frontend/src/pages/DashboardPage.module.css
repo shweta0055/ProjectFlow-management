@@ -1,0 +1,117 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.statCard {
+  background: var(--bg-2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  transition: border-color var(--transition);
+}
+
+.statCard:hover { border-color: var(--border-light); }
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: var(--text-3);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.searchWrap {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+  max-width: 360px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-3);
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.searchInput {
+  padding-left: 36px !important;
+}
+
+.filterGroup {
+  display: flex;
+  gap: 6px;
+}
+
+.filterActive {
+  background: var(--accent-glow) !important;
+  color: var(--accent-2) !important;
+  border-color: rgba(124, 109, 250, 0.3) !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.loadingState {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.pageInfo {
+  font-size: 0.875rem;
+  color: var(--text-3);
+}
+
+@media (max-width: 640px) {
+  .stats { grid-template-columns: 1fr 1fr; }
+  .stats .statCard:last-child { grid-column: span 2; }
+  .filters { flex-direction: column; align-items: stretch; }
+  .searchWrap { max-width: 100%; }
+}
