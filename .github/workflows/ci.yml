@@ -108,16 +108,13 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build backend image
-        run: |
-          docker build ./backend -t projectflow-backend:test
+        run: docker build ./backend -t projectflow-backend:test
 
       - name: Build frontend image
-        run: |
-          docker build ./frontend -t projectflow-frontend:test
+        run: docker build ./frontend -t projectflow-frontend:test
 
-      - name: Run docker-compose build
-        run: |
-          docker-compose build
+      - name: Run docker compose build
+        run: docker compose build
 
   # ─── Docker Push to DockerHub (only on main) ──────────────
   docker-push:
