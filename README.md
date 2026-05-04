@@ -310,16 +310,4 @@ Frontend test coverage includes:
 
 ## 🌐 Deployment Notes (Optional)
 
-### Backend → Render / Railway
-- Set `DEBUG=False`, `DB_ENGINE=postgresql`, `ALLOWED_HOSTS=yourdomain.com`
-- Run `python manage.py collectstatic` and serve with `gunicorn projectflow.wsgi`
 
-### Frontend → Vercel / Netlify
-- Set `REACT_APP_API_URL=https://your-backend.onrender.com/api`
-- Run `npm run build` and deploy the `build/` folder
-
----
-
-## 📄 License
-
-MIT — free to use and modify.
